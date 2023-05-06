@@ -6,8 +6,8 @@ N = 16; % symbol number
 modSize = 4; % modulation size
 deltaf = 15e3 * 2^4; % subcarrier spacing
 T = 1 / deltaf; % symbol duration
-cpSize = N / 4;
-cpDuration = cpSize / N * T;
+cpSize = M / 4;
+cpDuration = cpSize / M * T;
 
 % Channel parameters
 c0 = physconst('LightSpeed'); % light of speed
