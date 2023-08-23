@@ -91,6 +91,8 @@ estimatedDelay = (a1 + b1) / 2 * T / M;
 estimatedDoppler = (a2 + b2) / 2 * deltaf / N;
 estimatedRange = estimatedDelay * c0 / 2;
 estimatedVelocity = estimatedDoppler * c0 / fc / 2;
+Hp = OTFS_output(Xdd, T, estimatedDelay, estimatedDoppler);
+estimatedAlpha = (Hp' * Hp) \ (Hp' * ydd);
 
 % Display sensing estimation result
 sensingResult = ['The estimated target range is ', num2str(estimatedRange), ' m.'];
